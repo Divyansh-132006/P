@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+li {
+  list-style: none;
+}
+
+mark {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  position: relative;
+}
+
+.logophoto img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.listitem {
+  display: flex;
+  align-items: center;
+}
+
+#listitem {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.navhidden {
+  display: flex;
+  gap: 30px;
+}
+
+.navhidden a li {
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.navhidden a li:hover {
+  color: #ccc;
+}
+
+.navhidden a li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navhidden a li:hover::after {
+  width: 100%;
+}
+
+/* First Half Styles */
+#firsthalf {
+  min-height: 100vh;
+  padding: 0 5%;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+#intropart {
+  height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+#intropart h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 800px;
+  background: linear-gradient(to right, #ffffff, #888888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.intro {
+  max-width: 600px;
+}
+
+.intro h4 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Second Half Styles */
+.secondhalf {
+  padding: 50px 5%;
+  background-color: #111;
+}
+
+.border {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.border h1 {
+  display: inline-block;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+.projectsection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 20px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.card button {
+  margin: 10px 0 0 0;
+  display: block;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #080808;
+  color: #888;
+  margin-top: 100px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  #intropart h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #intropart h1 {
+    font-size: 1.8rem;
+  }
+  
+  .intro h4 {
+    font-size: 1.3rem;
+  }
+  
+  .navhidden {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #222;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+  
+  .navhidden.active {
+    transform: translateX(0);
+  }
+  
+  #listitem {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  #intropart h1 {
+    font-size: 1.5rem;
+  }
+  
+  .intro h4 {
+    font-size: 1.2rem;
+  }
+  
+  .border h1 {
+    font-size: 1.6rem;
+  }
+  
+  .card {
+    min-height: auto;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#intropart h1, .intro h4, .intro p {
+  animation: fadeIn 1s ease forwards;
+}
+
+.intro h4 {
+  animation-delay: 0.2s;
+}
+
+.intro p {
+  animation-delay: 0.4s;
+}

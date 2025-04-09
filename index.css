@@ -1,0 +1,452 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn{
+  width: 7rem;
+  height: 3rem;
+  border: 3px solid white;
+  border-radius: 14px;
+  color: rgba(15, 86, 201, 0.285);
+  font-size:23px;
+  font-weight: 800;
+  margin: 18px;
+  text-align: center;
+  color: white;
+}
+/* CSS to hide social icons in all responsive states */
+.contain {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  opacity: 0;
+  visibility: hidden;  /* This hides the element completely */
+  height: 0;          /* Collapse the height when hidden */
+  overflow: hidden;   /* Ensure no content spills out */
+  transition: all 0.5s ease;
+}
+
+.contain.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;      /* Expand height when shown */
+  margin-top: 15px;  /* Add spacing when shown */
+  overflow: visible;
+}
+
+/* Styling for the icons */
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.circle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto; /* or scroll if needed */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+  }
+
+
+
+body {
+  font-family: 'Arial', sans-serif;
+ 
+}
+html, body{
+  scrollbar-width: none;
+  -ms-overflow-style: none;    
+}
+
+body::-webkit-scrollbar {
+  display: none;              
+}
+
+
+/* Social Popup Styles */
+.social-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.social-popup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.social-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social-popup.active .social-container {
+  transform: scale(1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff3366;
+  transform: rotate(90deg);
+}
+
+.social-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  opacity: 0.2;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover:before {
+  transform: scale(1);
+}
+
+/* Individual social icon colors */
+.social-icon:nth-child(1) {
+  color: #1877f2; /* Facebook */
+}
+
+.social-icon:nth-child(2) {
+  color: #e4405f; /* Instagram */
+}
+
+.social-icon:nth-child(3) {
+  color: #0a66c2; /* LinkedIn */
+}
+
+.social-icon:nth-child(4) {
+  color: #333; /* GitHub */
+}
+
+/* Connect Button */
+.connect-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.connect-btn:hover {
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Options Menu */
+.options-menu {
+  position: absolute;
+  bottom: 75px;
+  right: 30px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.options-menu.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.option-item {
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.option-item:hover {
+  background-color: #f5f5f5;
+}
+
+.option-icon {
+  font-size: 18px;
+  width: 24px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .social-container {
+    padding: 20px;
+  }
+  
+  .social-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .social-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .connect-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .options-menu {
+    right: 20px;
+    bottom: 80px;
+    width: 180px;
+  }
+  .contain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.circle{
+    margin: 9px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+}
+.circle a{
+    text-decoration: none;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:8px ;
+    color: white;
+}
+.contain{
+    display: none;
+}
+.contain.show{
+    display: block flex;
+
+}
+}
+.contain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.circle{
+    margin: 9px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+}
+.circle a{
+    text-decoration: none;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:8px ;
+    color: white;
+}
+.contain{
+    display: none;
+}
+.contain.show{
+    display: block flex;
+
+}
+
+
+@media (max-width: 480px) {
+  .social-container {
+    padding: 15px;
+  }
+  
+  .social-icons {
+    gap: 15px;
+  }
+  .contain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.circle{
+    margin: 9px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+}
+.circle a{
+    text-decoration: none;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:8px ;
+    color: white;
+}
+.contain{
+    display: none;
+}
+.contain.show{
+    display: block flex;
+
+}
+}
+.contain{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.circle{
+    margin: 9px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+}
+.circle a{
+    text-decoration: none;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:8px ;
+    color: white;
+}
+.contain{
+    display: none;
+}
+.contain.show{
+    display: block flex;
+
+}
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
