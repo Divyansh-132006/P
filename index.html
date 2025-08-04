@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divyansh Upadhyay - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+        }
+
+        .typing-animation {
+            border-right: 2px solid #2563EB;
+            animation: blink 1s infinite;
+        }
+
+       
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 transition-all duration-300">
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-200 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-gray-900">Divyansh Upadhyay</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#Learning" class="text-gray-600 hover:text-blue-600 transition-colors">Learning</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+                </div>
+                <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                    <i class="fas fa-moon text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="home"
+        class="hero-gradient min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 font-poppins">
+                    Building Smart Web Experiences
+                </h1>
+                <div class="text-xl md:text-2xl mb-8 h-8">
+                    <span id="typingText" class="typing-animation"></span>
+                </div>
+                <p class="text-lg md:text-xl mb-8 text-gray-300 max-w-2xl mx-auto">
+                    2nd-year B.Tech CS student passionate about full-stack development, AI integration, and creating
+                    scalable web applications with clean, intuitive interfaces.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects"
+                        class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        View Projects
+                    </a>
+                    <a href="/Divyansh Upadhyay.pdf"
+                        class="border-2 border-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Download Resume
+                    </a>
+                    <a href="#contact"
+                        class="bg-transparent border-2 border-blue-400 hover:bg-blue-400 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Passionate about creating innovative solutions that bridge technology and user experience
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div
+                        class="w-64 h-64 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl">
+                       <img src="fiverrlogo.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-900">Hi, I'm Divyansh!</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I'm a 2nd-year Computer Science student with a passion for full-stack development and AI
+                        integration.
+                        I love building scalable web applications that solve real-world problems while maintaining
+                        clean,
+                        intuitive user interfaces. My journey in tech is driven by curiosity and a desire to create
+                        meaningful digital experiences.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to open-source
+                        projects,
+                        or learning about the latest developments in artificial intelligence and web development.
+                    </p>
+
+                    <h4 class="text-xl font-semibold mb-4 text-gray-900">Technical Skills</h4>
+                    <div class="grid grid-cols-4 md:grid-cols-6 gap-4">
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-html5 text-2xl text-orange-600 mb-2"></i>
+                            <p class="text-xs font-medium">HTML5</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-css3-alt text-2xl text-blue-600 mb-2"></i>
+                            <p class="text-xs font-medium">CSS3</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-js-square text-2xl text-yellow-500 mb-2"></i>
+                            <p class="text-xs font-medium">JavaScript</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-react text-2xl text-blue-400 mb-2"></i>
+                            <p class="text-xs font-medium">React</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-node-js text-2xl text-green-600 mb-2"></i>
+                            <p class="text-xs font-medium">Node.js</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fas fa-database text-2xl text-green-700 mb-2"></i>
+                            <p class="text-xs font-medium">MongoDB</p>
+                        </div>
+                        <div
+                            class="skill-icon text-center p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                            <i class="fab fa-git-alt text-2xl text-red-600 mb-2"></i>
+                            <p class="text-xs font-medium">Git</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    A showcase of my recent work in web development and AI integration
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <img src="LiveChat.png" alt="">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Live-Chat-Application</h3>
+                        <p class="text-gray-600 mb-4"> A real-time messaging web app built with React and Firebase,
+                            allowing users to chat instantly in a clean,
+                            responsive UI.
+                        <ol>
+                            <br> 🚀 Key Features:
+                            <br>🔐 Google Login with Firebase Authentication</br>
+
+                            <br>💬 Real-time chat using Firebase Realtime Database</br>
+
+                            <br>📱 Responsive UI with React & Tailwind CSS</br>
+
+                            <br>🔔 Auto-scroll, time-stamped messages</br>
+
+                            <br>🧹 Chatroom clears on logout (session-based)</br>
+                        </ol>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Socket.io</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://gleeful-lolly-1c6012.netlify.app/"
+                                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/Divyansh-132006/LiveChat"
+                                class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-2 rounded-lg transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+               <img src="Ai.png" alt="">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">AI Career Advisor</h3>
+                        <p class="text-gray-600 mb-4">A full-stack web app that uses Generative AI (Gemini or GPT) to
+                            suggest personalized career paths based
+                            on user input.
+                            Built with React, Node.js, and MongoDB, the platform supports:
+                        <ol>
+                            <br>🧠 AI-based roadmap generation</br>
+                            <br>💬 “Ask Anything” career assistant</br>
+                            <br>👤 Login & user profile system</br>
+                            <br>🕓 Interaction history tracking</br>
+                            <br>🔐 API key-based secure AI integration</br>
+                            <br>⚙️ Users plug in their own Gemini/GPT API key to activate AI features.</br>
+                        </ol>
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Gemini</span>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Express</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://melodic-selkie-5a91c4.netlify.app/"
+                                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/Divyansh-132006/AI-CareerResponse"
+                                class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-2 rounded-lg transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <img src="/bill.png" alt="">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900">Payzon-Digital World</h3>
+                        <p class="text-gray-600 mb-4">Payzon is a dynamic, all-in-one payment solution that streamlines
+                            transactions for users by integrating
+                            multiple payment methods—UPI, cards, wallets, and more—into a single, seamless platform.
+                            Designed for
+                            convenience and security, Payzon simplifies digital payments across services, making
+                            financial
+                            interactions
+                            faster and more user-friendly within one intuitive app.Support Booking Train Ticket , Movies
+                            Ticket and
+                            have a option to do Recharge of different Operators.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">React</span>
+                            
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="https://payzon-complete-payment-world-1.onrender.com
+                                class="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg transition-colors">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/Divyansh-132006/Payzon-Full-Stack-Project"
+                                class="flex-1 border border-gray-300 hover:bg-gray-50 text-gray-700 text-center py-2 rounded-lg transition-colors">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Learning" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">Learning Journey</h2>
+                <p class="text-xl text-gray-600">My path in technology and continuous learning</p>
+            </div>
+
+            <div class="relative">
+                <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+
+                <div class="timeline-item relative pl-12 pb-8 fade-in">
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900">Full-Stack Development</h3>
+                            
+                        </div>
+                        <p class="text-gray-600">Mastering MERN stack development with focus on scalable applications
+                            and modern web technologies.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item relative pl-12 pb-8 fade-in">
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900">AI & Machine Learning</h3>
+                            
+                        </div>
+                        <p class="text-gray-600">Exploring artificial intelligence, working with Gemino+i APIs, and
+                            building intelligent web applications.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item relative pl-12 pb-8 fade-in">
+                    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                        <div class="flex items-center mb-2">
+                            <h3 class="text-lg font-semibold text-gray-900">Computer Science Studies</h3>
+                            
+                        </div>
+                        <p class="text-gray-600">Pursuing B.Tech in Computer Science with focus on software engineering
+                            and data structures.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item relative pl-12 fade-in">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <div class="flex items-center mb-2">
+                            <h3 class="text-lg font-semibold text-blue-900">Currently Learning</h3>
+                            
+                        </div>
+                        <p class="text-blue-700">Advanced React patterns and cloud deployment with
+                            AWS/Vercel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4 font-poppins">Get In Touch</h2>
+                <p class="text-xl text-gray-600">
+                    Let's discuss your next project or collaboration opportunity
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-900">Let's Connect</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 text-xl w-8"></i>
+                            <span class="text-gray-600">divyansh.upadhyay@email.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-linkedin text-blue-600 text-xl w-8"></i>
+                            <a href="https://www.linkedin.com/in/divyansh-upadhyay-594279325"
+                                class="text-gray-600 hover:text-blue-600 transition-colors">linkedin.com/in/divyansh-upadhyay</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-github text-blue-600 text-xl w-8"></i>
+                            <a href="#"
+                                class="text-gray-600 hover:text-blue-600 transition-colors">github.com/divyansh-upadhyay</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Divyansh Upadhyay</h3>
+                <p class="text-gray-400 mb-6">Full-Stack Developer & AI Enthusiast</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="https://www.linkedin.com/in/divyansh-upadhyay-594279325" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/Divyansh-132006" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                  
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">&copy; 2025 Divyansh Upadhyay. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="ui.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'969b7a166423c03d',t:'MTc1NDI4MzQ3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
